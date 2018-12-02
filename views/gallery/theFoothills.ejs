@@ -1,0 +1,79 @@
+<% include ../partials/header %> 
+
+
+ <div class="container">
+     <header class="jumbotron">
+         <div class="divSlideshow container">
+             <h1>Front Range Publishings</h1>
+             <p>View our Collection of Photos</p>
+            <!-- <ul class="slideshow">-->
+            <!--       <li></li>-->
+            <!--       <li></li>-->
+            <!--       <li></li>-->
+            <!--       <li></li>-->
+            <!--       <li></li>-->
+            <!--  </ul>-->
+            <!--</div>-->
+             <!--<p>-->
+             <!--   <a class="btn btn-primary btn-large" href="/gallerys/new">Add Photo</a>-->
+             <!--</p>-->
+         </div>
+     </header>
+    <div class="sectionContainer1">
+      <div class="sectionHeader text-center" style="display:flex; flex-wrap: wrap;">
+          <h3>Section 1</h3>
+          
+          
+          <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+          
+          
+          
+        <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Album</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Colorado National Monument</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+                <!--<div class="thumbnail">-->
+          </div>
+ </div>
+ <script>
+<div class=indexContainer>
+     <div class="row text-center indexImg Opacity" style="display:flex; flex-wrap: wrap;">
+        <% gallery.forEach(function(gallery){ %>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumbnail">
+                <!--<div class="thumbnail">-->
+                  <a href="/gallery/<%= gallery._id %>" class="btn"> <img src="<%= gallery.image %>"></a>
+                   <div class="caption">
+                       <h4><%= gallery.name %></h4>
+                   </div>
+                <!--</div>-->
+            </div>
+        <% }); %>
+     </div>
+     </div>
+     </script>
+</div>
+<% include ../partials/footer %>

@@ -1,0 +1,56 @@
+<% include ../partials/header %>
+<div class="container">
+    
+     </div> 
+        <div class="info">
+            <h3><%=gallery.name%></h3>
+            <div>
+                <p><%=gallery.album%>  -  <%=gallery.year%></p>
+            </div>
+        </div>
+        
+        
+    <!--<div class="row">-->
+        
+    <!--    <div class="col-md-9">-->
+            <div class="showImg img-wrapper zoom">
+                <img class="img-responsive" src="<%= gallery.image %>"
+            </div>
+        </div>
+        
+        <div class="goBackBtn">
+        <a href="/gallery">Go Back</a>
+        </div>
+        
+         <div class="editDeleteBtn">
+         <% if(currentUser && gallery.author.id.equals(currentUser._id)){ %>
+                        <a class="btn btn-xs btn-warning" href="/gallery/<%= gallery._id %>/edit">Edit</a>
+                        <form id="delete-form" action="/gallery/<%= gallery._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-xs btn-danger">Delete</button>
+                        </form>
+                    <% }%>
+                </div>
+       
+    </div>
+</div>
+
+<% include ../partials/footer %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

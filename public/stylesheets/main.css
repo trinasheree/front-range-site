@@ -1,0 +1,310 @@
+/*General CSS*/
+
+
+
+.sectionHeader {
+  background-color: #eee;
+  opacity: .90;
+  text-align: center;
+  min-height: 150px;
+}
+
+.form-group {
+ style: none; 
+}
+.container {
+    /*font-family: 'Lobster', cursive;*/
+    font-family: 'Raleway', sans-serif;
+}
+
+.jumbotron {
+    opacity: .90;
+    text-align: center;
+    padding: 5%;
+}
+.row {
+    background-color: white;
+    opacity: 1.0;
+}
+
+.editDeleteBtn {
+    padding-top: 7%;
+    margin-left: 20%;
+}
+
+a {
+    /*font-family: 'Lobster', cursive;*/
+    font-family: 'Raleway', sans-serif;
+    color: Black;
+}
+
+.footerContainer {
+    padding-right:8%;
+    text-align: center;
+    position: relative;
+    background-color: white;
+    max-height: 250px;
+    margin-top:5%;
+}
+
+.textAlign { 
+  text-align: center;
+  padding-bottom: 1%;
+}
+
+
+.showImg {
+  /*padding-left: 20%;*/
+ max-width: 800px;
+ max-height: 1200px;
+ margin-left: 18%;
+ margin-right: 16%;
+ padding-top: 10px;
+}
+
+.indexZoom:hover {
+  transform: scale(1.1);
+   transition: all .2s ease;
+    vertical-align: middle;
+}
+
+.img-wrapper {
+    display: inline-block; /* change the default display type to inline-block */
+    overflow: hidden;      /* hide the overflow */
+    transition: all .6s ease;
+    vertical-align: middle;
+}
+
+.zoom:hover {
+   display: inline-block;
+   overflow: hidden;
+  transform: scale(1.2);
+  -ms-transform:scale(1.2); /* IE 9 */
+    -moz-transform:scale(1.2); /* Firefox */
+    -webkit-transform:scale(1.2); /* Safari and Chrome */
+    -o-transform:scale(1.2); /* Opera */
+}
+
+.goBackBtn {
+    padding-top: 7%;
+    padding-left: 20%;
+}
+
+.contact {
+    padding-top: 5%;
+    margin-left: 7%;
+}
+
+.h3 {
+   margin-left: 46%; 
+}
+
+/* Shrink wrap strategy 2 */
+/*.easyzoom {*/
+/*    display: inline-block;*/
+/*    vertical-align: bottom;*/
+/*}*/
+
+.info {
+  max-width:500px;
+  height: 80px;
+  text-align: center;
+  margin-left: 29.1%;
+  padding-bottom: 9%;
+}
+
+.indexContainer {
+  padding-top: 5px;
+}
+
+.thumbnail img {
+    width: 100%;
+    opacity: 1.0;
+    max-height: 400px;
+    max-width: 300px;
+}
+
+.thumbnail {
+    border-style: none!important;
+}
+
+.thumbnail .caption-full {
+    padding: 7px;
+}
+
+#delete-form {
+    display: inline;
+}
+
+body {
+  
+    /*background: url("../images/pics/goose.png");*/
+    z-index: -2;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+     overflow: scroll;
+}
+
+
+
+/*Slideshow CSS*/
+
+.divSlideshow {
+    width: 100%;
+}
+
+.slideshow {
+  height: 450px;
+  width: 100%;
+  /*top: 0;*/
+  /*left: 0;*/
+  z-index: 3;
+  list-style: none;
+  position: relative;
+  background-position: 50% 50%;
+ }
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+  position: absolute;
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(http://i.imgur.com/K3mPv14.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(http://i.imgur.com/SBEmFpv.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(http://i.imgur.com/emvhOnb.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+  animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/*Dropdown CSS*/
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+
+
+
+
+/*.bgImage{*/
+/*    opacity: 0.7; */
+/*     width: 100%; */
+/*    height: 100%; */
+/*    left: 0px; */
+/*    top: 0px; */
+/*    z-index: -1;*/
+/*}*/
+/*body {*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center;*/
+    /*-webkit-background-size: contain;*/
+    /*-moz-background-size: contain;*/
+    /*-o-background-size: contain;*/
+    /*background-size: 100%;*/
+/*}*/
+/*.bgImage {*/
+/*    background-image: url("https://images.unsplash.com/photo-1510633528987-29c041f7a672?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=193b7e6d9f847c2577e63da5fd1ffc0c&auto=format&fit=crop&w=750&q=80");*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center;*/
+    /*-webkit-background-size: contain;*/
+    /*-moz-background-size: contain;*/
+    /*-o-background-size: contain;*/
+    /*background-size: contain;*/
+/*    opacity: 0.7;*/
+/*}*/
+
+/*.bgImage {*/
+/*  opacity: 0.7;*/
+/*}*/
+
+
+
+/*.row {*/
+/*     position:relative;*/
+/*      z-index:1;*/
+/*      height:100%;*/
+/*      min-width: 1000px;*/
+/*      max-width: 1500px;*/
+/*      margin: 0 auto;*/
+/*}*/
