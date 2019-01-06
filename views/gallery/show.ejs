@@ -1,26 +1,33 @@
 <% include ../partials/header %>
 <div class="container">
     
-     </div> 
+</div> 
+       
+        
+        
+    <!--<div class="row">-->
+
+    <!--    <div class="col-md-9">-->
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img-wrapper zoom">
+                <img class="img-responsive showImg" src="<%= gallery.image %>"
+    </div>    
+        
+    </div>   
+    <div>
         <div class="info">
             <h3><%=gallery.name%></h3>
             <div>
                 <p><%=gallery.album%>  -  <%=gallery.year%></p>
             </div>
-        </div>
-        
-        
-    <!--<div class="row">-->
-        
-    <!--    <div class="col-md-9">-->
-            <div class="showImg img-wrapper zoom">
-                <img class="img-responsive" src="<%= gallery.image %>"
             </div>
         </div>
         
-        <div class="goBackBtn">
+        
+         <div class="goBackBtn">
         <a href="/gallery">Go Back</a>
         </div>
+        
         
          <div class="editDeleteBtn">
          <% if(currentUser && gallery.author.id.equals(currentUser._id)){ %>
